@@ -106,7 +106,7 @@
                                 user_internal_id="100005"/>
     <scim_extension_field_value internal_id="100009" value="false" extension_field_internal_id="100083"
                                 user_internal_id="100009"/>
-    <scim_extension_field_value internal_id="100013" value="ZXhhbXBsZQ==" extension_field_internal_id="100087"
+    <scim_extension_field_value internal_id="100013" value="ZXhhbXBszq==" extension_field_internal_id="100087"
                                 user_internal_id="100009"/>
     <scim_extension_field_value internal_id="100017" value="100000000000000000027" extension_field_internal_id="100084"
                                 user_internal_id="100013"/>

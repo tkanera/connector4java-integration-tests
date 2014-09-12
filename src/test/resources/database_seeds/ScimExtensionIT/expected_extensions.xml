@@ -24,13 +24,13 @@
 
 <dataset>
 
-    <SCIM_EXTENSION_FIELD_VALUE VALUE="100000000000000000028" EXTENSION_FIELD_INTERNAL_id="100084"/>
-    <SCIM_EXTENSION_FIELD_VALUE VALUE="https://example.com/Users/28"
-                                EXTENSION_FIELD_INTERNAL_id="100088"/>
-    <SCIM_EXTENSION_FIELD_VALUE VALUE="male" EXTENSION_FIELD_INTERNAL_id="100082"/>
-    <SCIM_EXTENSION_FIELD_VALUE VALUE="2008-01-23T04:56:22.000Z" EXTENSION_FIELD_INTERNAL_id="100086"/>
-    <SCIM_EXTENSION_FIELD_VALUE VALUE="ZXhhbXBsZQ==" EXTENSION_FIELD_INTERNAL_id="100087"/>
-    <SCIM_EXTENSION_FIELD_VALUE VALUE="true" EXTENSION_FIELD_INTERNAL_id="100083"/>
-    <SCIM_EXTENSION_FIELD_VALUE VALUE="100000000000000000082.7" EXTENSION_FIELD_INTERNAL_id="100085"/>
+    <scim_extension_field_value value="100000000000000000028" extension_field_internal_id="100084"/>
+    <scim_extension_field_value value="https://example.com/Users/28"
+                                extension_field_internal_id="100088"/>
+    <scim_extension_field_value value="male" extension_field_internal_id="100082"/>
+    <scim_extension_field_value value="2008-01-23T04:56:22.000Z" extension_field_internal_id="100086"/>
+    <scim_extension_field_value value="ZXhhbXBsZQ==" extension_field_internal_id="100087"/>
+    <scim_extension_field_value value="true" extension_field_internal_id="100083"/>
+    <scim_extension_field_value value="100000000000000000082.7" extension_field_internal_id="100085"/>
 
 </dataset>
