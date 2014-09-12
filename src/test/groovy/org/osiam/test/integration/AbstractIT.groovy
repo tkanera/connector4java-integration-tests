@@ -25,10 +25,13 @@ package org.osiam.test.integration
 
 import javax.sql.DataSource
 
+import org.dbunit.database.DatabaseConfig
 import org.dbunit.database.DatabaseDataSourceConnection
 import org.dbunit.database.IDatabaseConnection
 import org.dbunit.dataset.IDataSet
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder
+import org.dbunit.ext.mysql.MySqlDataTypeFactory
+import org.dbunit.ext.mysql.MySqlMetadataHandler
 import org.dbunit.operation.DatabaseOperation
 import org.osiam.client.OsiamConnector
 import org.osiam.client.oauth.AccessToken
@@ -71,6 +74,14 @@ abstract class AbstractIT extends Specification {
         DataSource dataSource = (DataSource) ac.getBean("dataSource")
         // Establish database connection.
         IDatabaseConnection connection = new DatabaseDataSourceConnection(dataSource)
+
+        if ("MySQL".equals(connection.getConnection().getMetaData().getDatabaseProductName())) {
+            DatabaseConfig config = connection.getConfig()
+            config.setProperty(DatabaseConfig.FEATURE_CASE_SENSITIVE_TABLE_NAMES, Boolean.TRUE)
+            config.setProperty(DatabaseConfig.PROPERTY_METADATA_HANDLER, new MySqlMetadataHandler())
+            config.setProperty(DatabaseConfig.PROPERTY_DATATYPE_FACTORY, new MySqlDataTypeFactory())
+        }
+
         // Load the initialization data from file.
         IDataSet initData = new FlatXmlDataSetBuilder().build(ac.getResource(seedFileName).getFile())
 
